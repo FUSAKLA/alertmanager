@@ -140,7 +140,7 @@ func main() {
 	}
 	var (
 		configFile      = kingpin.Flag("config.file", "Alertmanager configuration file name.").Default("alertmanager.yml").String()
-		dataDir         = kingpin.Flag("storage.path", "Base path for data storage.").Default("data/").String()
+		dataDir         = kingpin.Flag("storage.path", "Base path for data storage.").Default("/alertmanager/data/").String()
 		retention       = kingpin.Flag("data.retention", "How long to keep data for.").Default("120h").Duration()
 		alertGCInterval = kingpin.Flag("alerts.gc-interval", "Interval between alert GC.").Default("30m").Duration()
 		logLevelString  = kingpin.Flag("log.level", "Only log messages with the given severity or above.").Default("info").Enum("debug", "info", "warn", "error")
